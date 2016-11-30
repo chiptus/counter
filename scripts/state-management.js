@@ -1,12 +1,9 @@
 function createState(curState = {}) {
   const defState = {
     counter: 0,
-    nameOfCounter: "Name",
+    name: "Name",
     increaseCounter,
-    onCounterChange: (count) => {
-      changeCounterText(count);
-      saveStateToStorage(state);
-    },
+    changeName,
   };
   const state = Object.assign(defState, curState);
 
@@ -14,6 +11,13 @@ function createState(curState = {}) {
     state.counter++;
     if (state.onCounterChange) {
       state.onCounterChange(state.counter);
+    }
+  }
+
+  function changeName(name){
+    state.name = name;
+    if (state.onNameChange) {
+      state.onNameChange(name);
     }
   }
 
