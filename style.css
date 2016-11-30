@@ -6,6 +6,8 @@
 
 #counter {
   user-select: none;
+   font-size: 72;
+    font-weight: bold;
 }
 
 .outer-container {
@@ -34,6 +36,22 @@
   color:aquamarine;
 }
 
+.social {
+  margin-top:15px;
+}
+
 .social button {
   font-size: 2em;
+}
+
+.box {
+    width: 100px;
+    margin: auto;
+    border: solid;
+    border-radius: 5px;
+}
+
+.box:hover {
+  background: lightgray;
+  cursor: pointer;
 }

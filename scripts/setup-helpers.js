@@ -13,7 +13,7 @@ function fillCounter({counter, name}) {
 }
 
 function setClickingOnCounter() {
-  onClick(".content", () => {
+  onClick("#counter", () => {
     state.increaseCounter();
   });
 }
