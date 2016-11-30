@@ -1,10 +1,20 @@
 .container {
-  margin: auto;
+  margin: 0 auto;
   width: 50%;
   text-align: center;
-  height: 100%;
 }
 
 #counter {
   user-select: none;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-nav {
+  
 }

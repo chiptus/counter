@@ -6,25 +6,30 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1 id="counter-title">Name of counter</h1>
-      <input id="counter-title-edit" hidden />
-    </header>
-    <div class="content">
-      <div id="counter">1</div>
-    </div>
-    <div class="social">
-      <button>F</button>
-      <button>T</button>
-      <button>Share</button>
-    </div>
+  <nav class="main-nav">
+  </nav>
+  <div class="outer-container">
+    <div class="container">
+      <header>
+        <h1 id="counter-title">Name of counter</h1>
+        <input id="counter-title-edit" hidden />
+      </header>
+      <div class="content">
+        <div id="counter">1</div>
+      </div>
+      <div class="social">
+        <button id="share-facebook">F</button>
+        <button id="share-twitter">T</button>
+        <button id="share">Share</button>
+      </div>
 
+    </div>
   </div>
-
-  <script src="scripts/state-management.js" ></script>
-  <script src="scripts/events.js" ></script>
-  <script src="scripts/script.js" ></script>
+  <script src="scripts/setup-helpers.js"></script>
+  <script src="scripts/social.js"></script>
+  <script src="scripts/state-management.js"></script>
+  <script src="scripts/events.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
