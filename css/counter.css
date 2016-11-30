@@ -1,0 +1,21 @@
+
+
+/* counter */
+
+#counter {
+  user-select: none;
+   font-size: 72;
+    font-weight: bold;
+}
+
+.box {
+    width: 100px;
+    margin: auto;
+    border: solid;
+    border-radius: 5px;
+}
+
+.box:hover {
+  background: lightgray;
+  cursor: pointer;
+}

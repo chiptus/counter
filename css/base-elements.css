@@ -1,0 +1,29 @@
+/* base elements */
+
+body {
+  margin:0;
+  padding:0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-nav {
+  position: fixed;
+  height:50px;
+  line-height: 50px;
+  background: black;
+  width:100%;
+  color: white;
+  padding: 0 15px;
+}
