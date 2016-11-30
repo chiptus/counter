@@ -1,6 +1,4 @@
-const state = createState((count) => {
-  changeCounterText(count);
-});
+const state = getStateFromStorage();
 
 onDocumentReady(() => {
   changeCounterText(state.counter);
