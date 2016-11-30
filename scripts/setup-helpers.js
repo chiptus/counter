@@ -36,5 +36,6 @@ function setTitleEditing() {
 function setSocialSharing() {
   setFacebookShare();
   setTwitterShare();
+  setShare();
 }
 

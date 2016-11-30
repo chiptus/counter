@@ -10,6 +10,12 @@ function setTwitterShare() {
   });
 }
 
+function setShare(){
+  onClick('#share', () => {
+    copyToClipboard(getSocialMessage(state));
+  })
+}
+
 function twitterShareUrl(counter) {
   return `https://twitter.com/intent/tweet?text=${getSocialMessage(counter)}`;
 }
@@ -21,5 +27,5 @@ function facebookShareUrl(counter) {
 }
 
 function getSocialMessage(counter) {
-  return `I counted on ${counter.name} already ${counter.counter} clicks using Chaim's counter`;
+  return `I counted on ${counter.name} already ${counter.counter} clicks using chiptus's counter`;
 }

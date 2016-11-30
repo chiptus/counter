@@ -16,5 +16,24 @@
 }
 
 .main-nav {
-  
+
+}
+
+.icon-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  color: red;
+}
+
+.icon-btn:active {
+  color:aquamarine;
+}
+
+.social button {
+  font-size: 2em;
 }
