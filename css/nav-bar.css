@@ -1,0 +1,18 @@
+.counters-list {
+      margin-right: 25px;
+    margin-top: 10px;
+}
+
+.counters-list select {
+  width: 200px;
+    height: 30px;
+    background: beige;
+}
+
+.main-nav > div {
+  display: inline-block;
+}
+
+.main-nav h1 {
+  margin:0;
+}

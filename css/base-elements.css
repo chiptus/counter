@@ -27,3 +27,11 @@ body {
   color: white;
   padding: 0 15px;
 }
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
