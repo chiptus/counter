@@ -32,6 +32,13 @@ function setChangingCounter(){
   })
 }
 
+function setClickingOnAddCounter(){
+  onClick(SELECTORS.ADD_COUNTERS_BTN, () => {
+    const counter = buildCounter("new counter", 0);
+    state.addCounter(counter);
+  })
+}
+
 function setTitleEditing() {
   onDblClick("#counter-title", () => {
     show('#counter-title-edit');

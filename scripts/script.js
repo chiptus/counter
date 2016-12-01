@@ -13,14 +13,16 @@ state.onNameChange = (name) => {
 state.onCounterChange = (counter) => {
   changeCounterText(counter.count);
   changeCounterTitle(counter.name);
+  fillCountersList(state.counters);
   saveStateToStorage(state);
 }
 
 onDocumentReady(() => {
   fillCounter(state.currentCounter);
-  fillCountersList(state.counters);
   setClickingOnCounter();
+  fillCountersList(state.counters);
   setChangingCounter();
+  setClickingOnAddCounter();
   setTitleEditing();
   setSocialSharing();
 });

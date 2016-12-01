@@ -1,6 +1,5 @@
 .counters-list {
       margin-right: 25px;
-    margin-top: 10px;
 }
 
 .counters-list select {
@@ -16,3 +15,17 @@
 .main-nav h1 {
   margin:0;
 }
+
+#add-counter{
+  background: white;
+      border: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#add-counter:hover {
+  background: palevioletred;
+}
+
