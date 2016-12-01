@@ -1,5 +1,5 @@
 function changeCounterText(c) {
-  changeText('#counter', c);
+  changeText(SELECTORS.COUNT, c);
 }
 
 function changeCounterTitle(title) {
@@ -7,15 +7,29 @@ function changeCounterTitle(title) {
   q('#counter-title-edit').value = title;
 }
 
-function fillCounter({counter, name}) {
-  changeCounterText(counter);
+function fillCounter({count, name}) {
+  changeCounterText(count);
   changeCounterTitle(name);
 }
 
+function fillCountersList(counters) {
+  const html = counters.map(c =>  (`
+    <option value="${c.id}">${c.name}</option>
+  `)).join("");
+  q(SELECTORS.COUNTERS_LIST_SELECT).innerHTML = html;
+}
+
 function setClickingOnCounter() {
-  onClick("#counter", () => {
+  onClick(SELECTORS.COUNT, () => {
     state.increaseCounter();
   });
+}
+
+function setChangingCounter(){
+  q(SELECTORS.COUNTERS_LIST_SELECT).addEventListener("change", () => {
+    const counterId = q(SELECTORS.COUNTERS_LIST_SELECT).value;
+    state.changeCurrentCounter(+counterId);
+  })
 }
 
 function setTitleEditing() {

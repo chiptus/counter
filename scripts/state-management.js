@@ -1,23 +1,41 @@
 function createState(curState = {}) {
-  const defState = {
-    counter: 0,
+  const defCounter = {
+    count: 0,
     name: "Name",
+    id: 0
+  }
+  const defState = {
+    counters: [defCounter, buildCounter("name1", 0)],
+    currentCounter: defCounter,
     increaseCounter,
     changeName,
+    changeCurrentCounter,
   };
   const state = Object.assign(defState, curState);
 
   function increaseCounter() {
-    state.counter++;
-    if (state.onCounterChange) {
-      state.onCounterChange(state.counter);
+    state.currentCounter.count += 1;
+    if (state.onCountChange) {
+      state.onCountChange(state.currentCounter.count);
     }
   }
 
-  function changeName(name){
-    state.name = name;
+  function changeName(name) {
+    state.currentCounter.name = name;
     if (state.onNameChange) {
       state.onNameChange(name);
+    }
+  }
+
+  function changeCurrentCounter(counterId) {
+    const counter = findAndRemoveFromArray(state.counters, c => c.id === counterId);
+    if (!counter) {
+      throw new Error("Didn't find counter with the following id" + counterId);
+    }
+    state.counters.unshift(counter);
+    state.currentCounter = counter;
+    if (state.onCounterChange) {
+      state.onCounterChange(counter);
     }
   }
 
