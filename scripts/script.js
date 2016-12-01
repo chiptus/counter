@@ -7,6 +7,7 @@ state.onCountChange = (count) => {
 
 state.onNameChange = (name) => {
   changeCounterTitle(name);
+  fillCountersList(state.counters);
   saveStateToStorage(state);
 }
 
