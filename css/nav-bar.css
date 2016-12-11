@@ -17,15 +17,23 @@
 }
 
 #add-counter{
-  background: white;
+}
+
+.counters-list button {
+    background: white;
       border: 0;
     height: 25px;
     width: 25px;
     border-radius: 25px;
     cursor: pointer;
+
+}
+
+.counters-list button:hover {
+  background: palevioletred;
+
 }
 
 #add-counter:hover {
-  background: palevioletred;
-}
+  }
 

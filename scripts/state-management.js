@@ -11,6 +11,7 @@ function createState(curState = {}) {
         changeName,
         changeCurrentCounter,
         addCounter,
+        removeCounter,
     };
     const state = Object.assign(defState, curState);
 
@@ -39,6 +40,22 @@ function createState(curState = {}) {
     function addCounter(counter) {
         state.counters.unshift(counter);
         state.currentCounter = counter;
+        callOnCounterChange(counter);
+    }
+
+    function removeCounter(id) {
+        state.counters = state.counters.filter(e => e.id !== id);
+        if (!state.counters.length) {
+            addCounter(buildCounter("new-one"));
+            return;
+        }
+        if (state.currentCounter.id === id) {
+            changeCurrentCounter(state.counters[0].id);
+        }
+        callOnCounterChange();
+    }
+
+    function callOnCounterChange(counter) {
         if (state.onCounterChange) {
             state.onCounterChange(counter);
         }

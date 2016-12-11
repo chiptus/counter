@@ -21,9 +21,7 @@ state.onCounterChange = (counter) => {
 onDocumentReady(() => {
   fillCounter(state.currentCounter);
   setClickingOnCounter();
-  fillCountersList(state.counters);
-  setChangingCounter();
-  setClickingOnAddCounter();
+  setCountersList();
   setTitleEditing();
   setSocialSharing();
 });

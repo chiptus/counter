@@ -9,4 +9,5 @@ const SELECTORS = {
   SOCIAL_FACEBOOK: '#share-facebook',
   SOCIAL_TWITTER: '#share-facebook',
   SHARE_BUTTON: '#share',
+  REMOVE_COUNTER_BTN: '#remove-counter'
 }
