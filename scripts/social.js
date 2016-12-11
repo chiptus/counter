@@ -1,17 +1,17 @@
 function setFacebookShare() {
-  onClick('#share-facebook', () => {
+  onClick(SELECTORS.SOCIAL_FACEBOOK, () => {
     window.open(facebookShareUrl(state), "_blank");
   });
 }
 
 function setTwitterShare() {
-  onClick('#share-twitter', () => {
+  onClick(SELECTORS.SOCIAL_TWITTER, () => {
     window.open(twitterShareUrl(state), "_blank");
   });
 }
 
 function setShare(){
-  onClick('#share', () => {
+  onClick(SELECTORS.SHARE_BUTTON, () => {
     copyToClipboard(getSocialMessage(state));
   })
 }

@@ -12,7 +12,7 @@ function onDocumentReady(callback = function () { }) {
   });
 }
 
-function onClick(selector = "body", callback = function () { }) {
+function onClick(selector = SELECTORS.BODY, callback = function () { }) {
   document.querySelector(selector).addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();

@@ -3,8 +3,8 @@ function changeCounterText(c) {
 }
 
 function changeCounterTitle(title) {
-  changeText('#counter-title', title);
-  q('#counter-title-edit').value = title;
+  changeText(SELECTORS.COUNTER_TITLE, title);
+  q(SELECTORS.COUNTER_TITLE_EDIT).value = title;
 }
 
 function fillCounter({count, name}) {
@@ -40,17 +40,17 @@ function setClickingOnAddCounter(){
 }
 
 function setTitleEditing() {
-  onDblClick("#counter-title", () => {
-    show('#counter-title-edit');
-    hide('#counter-title');
-    q('#counter-title-edit').focus();
+  onDblClick(SELECTORS.COUNTER_TITLE, () => {
+    show(SELECTORS.COUNTER_TITLE_EDIT);
+    hide(SELECTORS.COUNTER_TITLE);
+    q(SELECTORS.COUNTER_TITLE_EDIT).focus();
   });
-  onEnter('#counter-title-edit', () => {
-    const name = q('#counter-title-edit').value;
+  onEnter(SELECTORS.COUNTER_TITLE_EDIT, () => {
+    const name = q(SELECTORS.COUNTER_TITLE_EDIT).value;
     state.changeName(name);
-    hide('#counter-title-edit');
-    show('#counter-title');
-    q('#counter-title-edit').blur();
+    hide(SELECTORS.COUNTER_TITLE_EDIT);
+    show(SELECTORS.COUNTER_TITLE);
+    q(SELECTORS.COUNTER_TITLE_EDIT).blur();
   });
 }
 
