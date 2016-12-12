@@ -12,11 +12,21 @@ function createState(curState = {}) {
         changeCurrentCounter,
         addCounter,
         removeCounter,
+        restartCounter,
     };
     const state = Object.assign(defState, curState);
 
+    function restartCounter() {
+        state.currentCounter.count = 0;
+        callOnCountChange();
+    }
+
     function increaseCounter() {
         state.currentCounter.count += 1;
+        callOnCountChange();
+    }
+
+    function callOnCountChange() {
         if (state.onCountChange) {
             state.onCountChange(state.currentCounter.count);
         }

@@ -19,6 +19,11 @@ function setClickingOnCounter() {
   });
 }
 
+function setClickingRestart() {
+  onClick(SELECTORS.RESTART_BTN, () => {
+    state.restartCounter();
+  });
+}
 
 
 function setTitleEditing() {
